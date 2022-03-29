@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<script>
+
+	let aUsuarios = [];
+
+	function exibir(indice) {
+		document.getElementById("idNome").innerHTML = aUsuarios[indice].nome;
+		document.getElementById("idTelefone").innerHTML = aUsuarios[indice].telefone;
+		document.getElementById("idDatadenascimento").innerHTML = aUsuarios[indice].datadeNascimento;
+		document.getElementById("idNotafinaldocurso").innerHTML = aUsuarios[indice].notafinaldocurso;
+	}
+
+	function remover(indice) {
+		aUsuarios.splice(indice,1);
+		redesenha();
+	}
+
+	function redesenha() {
+		lista = "";
+
+		for( let i = 0 ; i < aUsuarios.length; i++ ) {
+			lista += "<button onclick='remover("+ i +")'>excluir</button> <span onclick='exibir("+ i +")'>" + aUsuarios[i].nome + "</span><BR>";
+		}
+		document.getElementById("lista").innerHTML = lista;
+	}
+
+	function criarCadastro() {
+		let nome = document.getElementById("nome").value;
+		let telefone = document.getElementById("telefone").value;
+		let datadeNascimento = document.getElementById("datadeNascimento").value;
+		let notafinaldocurso = document.getElementById("notafinaldocurso").value;
+
+		let u = {nome:nome, telefone:telefone, datadeNascimento:datadeNascimento, notafinaldocurso:notafinaldocurso};
+
+		aUsuarios.push(u);
+		redesenha();
+		alert("Cadastro efetuado com sucesso!")
+		
+	}
+</script
+>
+<body>
+	<div style="width:50%;float:left">
+		<br>Nome: <input id="nome">
+		<br><br>Telefone: <input id="telefone">
+		<br><br>Data de nascimento: <input id="datadeNascimento">
+		<br><br>Nota final do curso: <input id="notafinaldocurso">
+
+		<br><br>
+		<button onclick="criarCadastro()">Criar Cadastro</button>
+
+		<br><br>
+		<b>Lista de Usuários:</b>
+		<br>
+		<p id="lista"></p>
+	</div>
+
+
+
+	<div  style="width:50%;float:right">
+		Cadastro
+		<br><br>Nome: <span id="idNome"></span>
+		<br><br>Telefone: <span id="idTelefone"></span>
+		<br><br>Data de nascimento: <span id="idDatadenascimento"></span>
+		<br><br>Nota final do curso: <span id="idNotafinaldocurso"></span>
+	</div>
+</body>
+
+</html>
