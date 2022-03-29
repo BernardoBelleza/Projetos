@@ -1,0 +1,224 @@
+<html>
+<head>
+</head>
+
+
+
+
+<body>
+
+
+
+	Regras: vermelho - letra não possui na palavra, amarelo - a letra existe em outro lugar, azul - acertou a letra. <br><br>
+Palavra: <input id="palavra">
+
+<button onclick="testarPalavra()"> Testar palavra </button>
+
+
+	<style>
+    td {
+        padding: 25px;
+    }
+</style>
+<script>
+
+	const aResposta = ['dupla','navio','clube','turma','porto','drama','claro','chama','posto','gruta','velho']
+	let aPalavras = []
+	var z = Math.floor(Math.random() * 11)
+
+function testarPalavra() {
+		let palavra = document.getElementById("palavra").value
+		aPalavras.push(palavra)
+		
+if(aResposta[z].charAt(0) == aPalavras[0].charAt(0)){ document.getElementById("L1").style.backgroundColor = "blue"} 
+	else if(aPalavras[0].charAt(0) == aResposta[z].charAt(1) ||aPalavras[0].charAt(0) == aResposta[z].charAt(2) ||aPalavras[0].charAt(0) == aResposta[z].charAt(3) ||aPalavras[0].charAt(0) == aResposta[z].charAt(4))
+		{document.getElementById("L1").style.backgroundColor = "yellow" } else {document.getElementById("L1").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(1) == aPalavras[0].charAt(1)){ document.getElementById("L2").style.backgroundColor = "blue"} 
+	else if(aPalavras[0].charAt(1) == aResposta[z].charAt(1) ||aPalavras[0].charAt(1) == aResposta[z].charAt(2) ||aPalavras[0].charAt(1) == aResposta[z].charAt(3) ||aPalavras[0].charAt(1) == aResposta[z].charAt(4))
+		{document.getElementById("L2").style.backgroundColor = "yellow" } else {document.getElementById("L2").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(2) == aPalavras[0].charAt(2)){ document.getElementById("L3").style.backgroundColor = "blue"} 
+	else if(aPalavras[0].charAt(2) == aResposta[z].charAt(1) ||aPalavras[0].charAt(2) == aResposta[z].charAt(2) ||aPalavras[0].charAt(2) == aResposta[z].charAt(3) ||aPalavras[0].charAt(2) == aResposta[z].charAt(4))
+		{document.getElementById("L3").style.backgroundColor = "yellow" } else {document.getElementById("L3").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(3) == aPalavras[0].charAt(3)){ document.getElementById("L4").style.backgroundColor = "blue"} 
+	else if(aPalavras[0].charAt(3) == aResposta[z].charAt(1) ||aPalavras[0].charAt(3) == aResposta[z].charAt(2) ||aPalavras[0].charAt(3) == aResposta[z].charAt(3) ||aPalavras[0].charAt(3) == aResposta[z].charAt(4))
+		{document.getElementById("L4").style.backgroundColor = "yellow" } else {document.getElementById("L4").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(4) == aPalavras[0].charAt(4)){ document.getElementById("L5").style.backgroundColor = "blue"} 
+	else if(aPalavras[0].charAt(4) == aResposta[z].charAt(1) ||aPalavras[0].charAt(4) == aResposta[z].charAt(2) ||aPalavras[0].charAt(4) == aResposta[z].charAt(3) ||aPalavras[0].charAt(4) == aResposta[z].charAt(4))
+		{document.getElementById("L5").style.backgroundColor = "yellow" } else {document.getElementById("L5").style.backgroundColor = "red"}
+
+document.getElementById("L1").innerHTML = aPalavras[0].charAt(0)
+document.getElementById("L2").innerHTML = aPalavras[0].charAt(1)
+document.getElementById("L3").innerHTML = aPalavras[0].charAt(2)
+document.getElementById("L4").innerHTML = aPalavras[0].charAt(3)
+document.getElementById("L5").innerHTML = aPalavras[0].charAt(4)
+
+if(aResposta[z] == aPalavras[0]){ alert("Você Acertou!!"), document.getElementById("frase").innerHTML = "VOCÊ ACERTOU de primeira tchê??"} else {document.getElementById("frase").innerHTML = "TENTE DE NOVO TCHÊ"}
+
+
+if(aResposta[z].charAt(0) == aPalavras[1].charAt(0)){ document.getElementById("L6").style.backgroundColor = "blue"} 
+	else if(aPalavras[1].charAt(0) == aResposta[z].charAt(1) ||aPalavras[1].charAt(0) == aResposta[z].charAt(2) ||aPalavras[1].charAt(0) == aResposta[z].charAt(3) ||aPalavras[1].charAt(0) == aResposta[z].charAt(4))
+		{document.getElementById("L6").style.backgroundColor = "yellow" } else {document.getElementById("L6").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(1) == aPalavras[1].charAt(1)){ document.getElementById("L7").style.backgroundColor = "blue"} 
+	else if(aPalavras[1].charAt(1) == aResposta[z].charAt(1) ||aPalavras[1].charAt(1) == aResposta[z].charAt(2) ||aPalavras[1].charAt(1) == aResposta[z].charAt(3) ||aPalavras[1].charAt(1) == aResposta[z].charAt(4))
+		{document.getElementById("L7").style.backgroundColor = "yellow" } else {document.getElementById("L7").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(2) == aPalavras[1].charAt(2)){ document.getElementById("L8").style.backgroundColor = "blue"} 
+	else if(aPalavras[1].charAt(2) == aResposta[z].charAt(1) ||aPalavras[1].charAt(2) == aResposta[z].charAt(2) ||aPalavras[1].charAt(2) == aResposta[z].charAt(3) ||aPalavras[1].charAt(2) == aResposta[z].charAt(4))
+		{document.getElementById("L8").style.backgroundColor = "yellow" } else {document.getElementById("L8").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(3) == aPalavras[1].charAt(3)){ document.getElementById("L9").style.backgroundColor = "blue"} 
+	else if(aPalavras[1].charAt(3) == aResposta[z].charAt(1) ||aPalavras[1].charAt(3) == aResposta[z].charAt(2) ||aPalavras[1].charAt(3) == aResposta[z].charAt(3) ||aPalavras[1].charAt(3) == aResposta[z].charAt(4))
+		{document.getElementById("L9").style.backgroundColor = "yellow" } else {document.getElementById("L9").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(4) == aPalavras[1].charAt(4)){ document.getElementById("L10").style.backgroundColor = "blue"} 
+	else if(aPalavras[1].charAt(4) == aResposta[z].charAt(1) ||aPalavras[1].charAt(4) == aResposta[z].charAt(2) ||aPalavras[1].charAt(4) == aResposta[z].charAt(3) ||aPalavras[1].charAt(4) == aResposta[z].charAt(4))
+		{document.getElementById("L10").style.backgroundColor = "yellow" } else {document.getElementById("L10").style.backgroundColor = "red"}
+
+document.getElementById("L6").innerHTML = aPalavras[1].charAt(0)
+document.getElementById("L7").innerHTML = aPalavras[1].charAt(1)
+document.getElementById("L8").innerHTML = aPalavras[1].charAt(2)
+document.getElementById("L9").innerHTML = aPalavras[1].charAt(3)
+document.getElementById("L10").innerHTML = aPalavras[1].charAt(4)
+
+	if(aResposta[z] == aPalavras[1]){ alert("Você Acertou!!"), document.getElementById("frase").innerHTML = "VOCÊ ACERTOU de segunda?!"} else {document.getElementById("frase").innerHTML = "TENTE DE NOVO TCHÊ"}
+
+
+if(aResposta[z].charAt(0) == aPalavras[2].charAt(0)){ document.getElementById("L11").style.backgroundColor = "blue"} 
+	else if(aPalavras[2].charAt(0) == aResposta[z].charAt(1) ||aPalavras[2].charAt(0) == aResposta[z].charAt(2) ||aPalavras[2].charAt(0) == aResposta[z].charAt(3) ||aPalavras[2].charAt(0) == aResposta[z].charAt(4))
+		{document.getElementById("L11").style.backgroundColor = "yellow" } else {document.getElementById("L11").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(1) == aPalavras[2].charAt(1)){ document.getElementById("L12").style.backgroundColor = "blue"} 
+	else if(aPalavras[2].charAt(1) == aResposta[z].charAt(1) ||aPalavras[2].charAt(1) == aResposta[z].charAt(2) ||aPalavras[2].charAt(1) == aResposta[z].charAt(3) ||aPalavras[2].charAt(1) == aResposta[z].charAt(4))
+		{document.getElementById("L12").style.backgroundColor = "yellow" } else {document.getElementById("L12").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(2) == aPalavras[2].charAt(2)){ document.getElementById("L13").style.backgroundColor = "blue"} 
+	else if(aPalavras[2].charAt(2) == aResposta[z].charAt(1) ||aPalavras[2].charAt(2) == aResposta[z].charAt(2) ||aPalavras[2].charAt(2) == aResposta[z].charAt(3) ||aPalavras[2].charAt(2) == aResposta[z].charAt(4))
+		{document.getElementById("L13").style.backgroundColor = "yellow" } else {document.getElementById("L13").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(3) == aPalavras[2].charAt(3)){ document.getElementById("L14").style.backgroundColor = "blue"} 
+	else if(aPalavras[2].charAt(3) == aResposta[z].charAt(1) ||aPalavras[2].charAt(3) == aResposta[z].charAt(2) ||aPalavras[2].charAt(3) == aResposta[z].charAt(3) ||aPalavras[2].charAt(3) == aResposta[z].charAt(4))
+		{document.getElementById("L14").style.backgroundColor = "yellow" } else {document.getElementById("L14").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(4) == aPalavras[2].charAt(4)){ document.getElementById("L15").style.backgroundColor = "blue"} 
+	else if(aPalavras[2].charAt(4) == aResposta[z].charAt(1) ||aPalavras[2].charAt(4) == aResposta[z].charAt(2) ||aPalavras[2].charAt(4) == aResposta[z].charAt(3) ||aPalavras[2].charAt(4) == aResposta[z].charAt(4))
+		{document.getElementById("L15").style.backgroundColor = "yellow" } else {document.getElementById("L15").style.backgroundColor = "red"}
+
+document.getElementById("L11").innerHTML = aPalavras[2].charAt(0)
+document.getElementById("L12").innerHTML = aPalavras[2].charAt(1)
+document.getElementById("L13").innerHTML = aPalavras[2].charAt(2)
+document.getElementById("L14").innerHTML = aPalavras[2].charAt(3)
+document.getElementById("L15").innerHTML = aPalavras[2].charAt(4)
+	
+	if(aResposta[z] == aPalavras[2]){ alert("Você Acertou!!"), document.getElementById("frase").innerHTML = "VOCÊ ACERTOU na terceira!!"} else {document.getElementById("frase").innerHTML = "TENTE DE NOVO TCHÊ"}
+
+
+if(aResposta[z].charAt(0) == aPalavras[3].charAt(0)){ document.getElementById("L16").style.backgroundColor = "blue"} 
+	else if(aPalavras[3].charAt(0) == aResposta[z].charAt(1) ||aPalavras[3].charAt(0) == aResposta[z].charAt(2) ||aPalavras[3].charAt(0) == aResposta[z].charAt(3) ||aPalavras[3].charAt(0) == aResposta[z].charAt(4))
+		{document.getElementById("L16").style.backgroundColor = "yellow" } else {document.getElementById("L16").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(1) == aPalavras[3].charAt(1)){ document.getElementById("L17").style.backgroundColor = "blue"} 
+	else if(aPalavras[3].charAt(1) == aResposta[z].charAt(1) ||aPalavras[3].charAt(1) == aResposta[z].charAt(2) ||aPalavras[3].charAt(1) == aResposta[z].charAt(3) ||aPalavras[3].charAt(1) == aResposta[z].charAt(4))
+		{document.getElementById("L17").style.backgroundColor = "yellow" } else {document.getElementById("L17").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(2) == aPalavras[3].charAt(2)){ document.getElementById("L18").style.backgroundColor = "blue"} 
+	else if(aPalavras[3].charAt(2) == aResposta[z].charAt(1) ||aPalavras[3].charAt(2) == aResposta[z].charAt(2) ||aPalavras[3].charAt(2) == aResposta[z].charAt(3) ||aPalavras[3].charAt(2) == aResposta[z].charAt(4))
+		{document.getElementById("L18").style.backgroundColor = "yellow" } else {document.getElementById("L18").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(3) == aPalavras[3].charAt(3)){ document.getElementById("L19").style.backgroundColor = "blue"} 
+	else if(aPalavras[3].charAt(3) == aResposta[z].charAt(1) ||aPalavras[3].charAt(3) == aResposta[z].charAt(2) ||aPalavras[3].charAt(3) == aResposta[z].charAt(3) ||aPalavras[3].charAt(3) == aResposta[z].charAt(4))
+		{document.getElementById("L19").style.backgroundColor = "yellow" } else {document.getElementById("L19").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(4) == aPalavras[3].charAt(4)){ document.getElementById("L20").style.backgroundColor = "blue"} 
+	else if(aPalavras[3].charAt(4) == aResposta[z].charAt(1) ||aPalavras[3].charAt(4) == aResposta[z].charAt(2) ||aPalavras[3].charAt(4) == aResposta[z].charAt(3) ||aPalavras[3].charAt(4) == aResposta[z].charAt(4))
+		{document.getElementById("L20").style.backgroundColor = "yellow" } else {document.getElementById("L20").style.backgroundColor = "red"}
+
+document.getElementById("L16").innerHTML = aPalavras[3].charAt(0)
+document.getElementById("L17").innerHTML = aPalavras[3].charAt(1)
+document.getElementById("L18").innerHTML = aPalavras[3].charAt(2)
+document.getElementById("L19").innerHTML = aPalavras[3].charAt(3)
+document.getElementById("L20").innerHTML = aPalavras[3].charAt(4)
+
+	if(aResposta[z] == aPalavras[3]){ alert("Você Acertou!!"), document.getElementById("frase").innerHTML = "VOCÊ ACERTOU na quarta!"} else {document.getElementById("frase").innerHTML = "TENTE DE NOVO TCHÊ"}
+		
+if(aResposta[z].charAt(0) == aPalavras[4].charAt(0)){ document.getElementById("L21").style.backgroundColor = "blue"} 
+	else if(aPalavras[4].charAt(0) == aResposta[z].charAt(1) ||aPalavras[4].charAt(0) == aResposta[z].charAt(2) ||aPalavras[4].charAt(0) == aResposta[z].charAt(3) ||aPalavras[4].charAt(0) == aResposta[z].charAt(4))
+		{document.getElementById("L21").style.backgroundColor = "yellow" } else {document.getElementById("L21").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(1) == aPalavras[4].charAt(1)){ document.getElementById("L22").style.backgroundColor = "blue"} 
+	else if(aPalavras[4].charAt(1) == aResposta[z].charAt(1) ||aPalavras[4].charAt(1) == aResposta[z].charAt(2) ||aPalavras[4].charAt(1) == aResposta[z].charAt(3) ||aPalavras[4].charAt(1) == aResposta[z].charAt(4))
+		{document.getElementById("L22").style.backgroundColor = "yellow" } else {document.getElementById("L22").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(2) == aPalavras[4].charAt(2)){ document.getElementById("L23").style.backgroundColor = "blue"} 
+	else if(aPalavras[4].charAt(2) == aResposta[z].charAt(1) ||aPalavras[4].charAt(2) == aResposta[z].charAt(2) ||aPalavras[4].charAt(2) == aResposta[z].charAt(3) ||aPalavras[4].charAt(2) == aResposta[z].charAt(4))
+		{document.getElementById("L23").style.backgroundColor = "yellow" } else {document.getElementById("L23").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(3) == aPalavras[4].charAt(3)){ document.getElementById("L24").style.backgroundColor = "blue"} 
+	else if(aPalavras[4].charAt(3) == aResposta[z].charAt(1) ||aPalavras[4].charAt(3) == aResposta[z].charAt(2) ||aPalavras[4].charAt(3) == aResposta[z].charAt(3) ||aPalavras[4].charAt(3) == aResposta[z].charAt(4))
+		{document.getElementById("L24").style.backgroundColor = "yellow" } else {document.getElementById("L24").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(4) == aPalavras[4].charAt(4)){ document.getElementById("L25").style.backgroundColor = "blue"} 
+	else if(aPalavras[4].charAt(4) == aResposta[z].charAt(1) ||aPalavras[4].charAt(4) == aResposta[z].charAt(2) ||aPalavras[4].charAt(4) == aResposta[z].charAt(3) ||aPalavras[4].charAt(4) == aResposta[z].charAt(4))
+		{document.getElementById("L25").style.backgroundColor = "yellow" } else {document.getElementById("L25").style.backgroundColor = "red"}
+document.getElementById("L21").innerHTML = aPalavras[4].charAt(0)
+document.getElementById("L22").innerHTML = aPalavras[4].charAt(1)
+document.getElementById("L23").innerHTML = aPalavras[4].charAt(2)
+document.getElementById("L24").innerHTML = aPalavras[4].charAt(3)
+document.getElementById("L25").innerHTML = aPalavras[4].charAt(4)
+
+	if(aResposta[z] == aPalavras[4]){ alert("Você Acertou!!"), document.getElementById("frase").innerHTML = "VOCÊ ACERTOU na quinta"} else {document.getElementById("frase").innerHTML = "TENTE DE NOVO TCHÊ"}
+		
+if(aResposta[z].charAt(0) == aPalavras[5].charAt(0)){ document.getElementById("L26").style.backgroundColor = "blue"} 
+	else if(aPalavras[5].charAt(0) == aResposta[z].charAt(1) ||aPalavras[5].charAt(0) == aResposta[z].charAt(2) ||aPalavras[5].charAt(0) == aResposta[z].charAt(3) ||aPalavras[5].charAt(0) == aResposta[z].charAt(4))
+		{document.getElementById("L26").style.backgroundColor = "yellow" } else {document.getElementById("L26").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(1) == aPalavras[5].charAt(1)){ document.getElementById("L27").style.backgroundColor = "blue"} 
+	else if(aPalavras[5].charAt(1) == aResposta[z].charAt(1) ||aPalavras[5].charAt(1) == aResposta[z].charAt(2) ||aPalavras[5].charAt(1) == aResposta[z].charAt(3) ||aPalavras[5].charAt(1) == aResposta[z].charAt(4))
+		{document.getElementById("L27").style.backgroundColor = "yellow" } else {document.getElementById("L27").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(2) == aPalavras[5].charAt(2)){ document.getElementById("L28").style.backgroundColor = "blue"} 
+	else if(aPalavras[5].charAt(2) == aResposta[z].charAt(1) ||aPalavras[5].charAt(2) == aResposta[z].charAt(2) ||aPalavras[5].charAt(2) == aResposta[z].charAt(3) ||aPalavras[5].charAt(2) == aResposta[z].charAt(4))
+		{document.getElementById("L28").style.backgroundColor = "yellow" } else {document.getElementById("L28").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(3) == aPalavras[5].charAt(3)){ document.getElementById("L29").style.backgroundColor = "blue"} 
+	else if(aPalavras[5].charAt(3) == aResposta[z].charAt(1) ||aPalavras[5].charAt(3) == aResposta[z].charAt(2) ||aPalavras[5].charAt(3) == aResposta[z].charAt(3) ||aPalavras[5].charAt(3) == aResposta[z].charAt(4))
+		{document.getElementById("L29").style.backgroundColor = "yellow" } else {document.getElementById("L29").style.backgroundColor = "red"}
+
+if(aResposta[z].charAt(4) == aPalavras[5].charAt(4)){ document.getElementById("L30").style.backgroundColor = "blue"} 
+	else if(aPalavras[5].charAt(4) == aResposta[z].charAt(1) ||aPalavras[5].charAt(4) == aResposta[z].charAt(2) ||aPalavras[5].charAt(4) == aResposta[z].charAt(3) ||aPalavras[5].charAt(4) == aResposta[z].charAt(4))
+		{document.getElementById("L30").style.backgroundColor = "yellow" } else {document.getElementById("L30").style.backgroundColor = "red"}
+
+document.getElementById("L26").innerHTML = aPalavras[5].charAt(0)
+document.getElementById("L27").innerHTML = aPalavras[5].charAt(1)
+document.getElementById("L28").innerHTML = aPalavras[5].charAt(2)
+document.getElementById("L29").innerHTML = aPalavras[5].charAt(3)
+document.getElementById("L30").innerHTML = aPalavras[5].charAt(4)
+	
+	if(aResposta[z] == aPalavras[5]){ alert("Você Acertou!!"), document.getElementById("frase").innerHTML = "VOCÊ ACERTOU na sexta."} else {document.getElementById("frase").innerHTML = "TENTE DE NOVO TCHÊ"}
+
+
+}
+
+</script>
+
+    <table border=1>
+	<tr><td style="font-size: 22px" Id= "L1"></td><td style="font-size: 22px"   Id= "L2"></td><td style="font-size: 22px" Id= "L3"></td><td style="font-size: 22px" Id= "L4"></td><td style="font-size: 22px" Id= "L5"></td></tr>
+  	<tr><td style="font-size: 22px"Id= "L6"></td><td style="font-size: 22px" Id= "L7"></td><td style="font-size: 22px" Id= "L8"></td><td style="font-size: 22px" Id= "L9"></td><td style="font-size: 22px" Id= "L10"></td></tr>
+    <tr><td style="font-size: 22px"Id= "L11"></td><td style="font-size: 22px" Id= "L12"></td><td style="font-size: 22px" Id= "L13"></td><td style="font-size: 22px" Id= "L14"></td><td style="font-size: 22px" Id= "L15"></td></tr>
+    <tr><td style="font-size: 22px"Id= "L16"></td><td style="font-size: 22px" Id= "L17"></td><td style="font-size: 22px" Id= "L18"></td><td style="font-size: 22px" Id= "L19"></td><td style="font-size: 22px" Id= "L20"></td></tr>
+    <tr><td style="font-size: 22px"Id= "L21"></td><td style="font-size: 22px" Id= "L22"></td><td style="font-size: 22px" Id= "L23"></td><td style="font-size: 22px" Id= "L24"></td><td style="font-size: 22px" Id= "L25"></td></tr>
+    <tr><td style="font-size: 22px"Id= "L26"></td><td style="font-size: 22px" Id= "L27"></td><td style="font-size: 22px" Id= "L28"></td><td style="font-size: 22px" Id= "L29"></td><td style="font-size: 22px "Id= "L30"></td></tr>
+    <tr><td colspan=5 Id= "frase" ></td></tr>
+</tablex>
+
+<br><br><br>
+
+
+
+</body>
+
+</html>
